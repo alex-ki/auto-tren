@@ -8,7 +8,7 @@
   "custom_assertions_path": "assertions",
   "globals_path": "globals.js",
   "disable_colors": false,
-  "test_workers": {   "enabled": true,  "workers": 1  },
+  "test_workers": false,
   "webdriver": {
     "start_process": false,
     "server_path": "node_modules/chromedriver/bin/chromedriver",
@@ -44,6 +44,7 @@
             }
           },
           "args": [
+            "--no-sandbox",
             "--user-agent=Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
             "--headless"
           ]

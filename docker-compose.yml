@@ -1,0 +1,9 @@
+version: "2"
+services:
+  qarate-test:
+    build: .
+    command: tests
+    environment:
+      - TEST=test
+    volumes:
+      -  ./reports:/root/reports

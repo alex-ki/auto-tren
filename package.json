@@ -9,7 +9,7 @@
   "license": "MIT",
   "keywords": [],
   "dependencies": {
-    "chromedriver": "80.0.1",
+    "chromedriver": "^80.0.1",
     "junit-viewer": "*",
     "nightwatch": "^1.3.4",
     "nightwatch-html-reporter": "*",
