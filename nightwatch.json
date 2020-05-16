@@ -4,9 +4,11 @@
   ],
   "output_folder": "reports",
   "page_objects_path": "pages",
+  "custom_commands_path": "commands",
+  "custom_assertions_path": "assertions",
   "globals_path": "globals.js",
   "disable_colors": false,
-  "test_workers": false,
+  "test_workers": {   "enabled": true,  "workers": 1  },
   "webdriver": {
     "start_process": false,
     "server_path": "node_modules/chromedriver/bin/chromedriver",
@@ -42,11 +44,11 @@
             }
           },
           "args": [
-
+            "--user-agent=Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+            "--headless"
           ]
         }
       },
-      "launch_url": "https://www.mql5.com/en/economic-calendar",
       "globals": {}
     }
   }
