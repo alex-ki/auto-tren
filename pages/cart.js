@@ -1,14 +1,5 @@
 const catalogCommands = {
 
-
-  elCardDates(n) {
-    return `.card-deck > a.card:nth-child(${n}) > .list-group > .list-group-item:first-child > strong`;
-  },
-
-  elCardPrice(n) {
-    return `.card-deck > a.card:nth-child(${n}) > .list-group > .list-group-item:last-child > strong`;
-  },
-
 };
 
 module.exports = {

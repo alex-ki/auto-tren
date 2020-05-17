@@ -16,6 +16,7 @@ module.exports = {
   commands: [catalogCommands],
   elements: {
     title: {selector: '#catalog-header'},
+    catalog: {selector: '.card-deck'},
     infoCard: {selector: '.card-deck > a.card'},
     search: {selector: '#catalog-header > input'}
 

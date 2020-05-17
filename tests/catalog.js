@@ -15,7 +15,9 @@ module.exports = {
   'Check catalog consistency' : function (client) {
     var catalogPage = client.page.catalog();
     catalogPage.navigate();
-    catalogPage.waitForElementVisible('@title')
+    catalogPage
+      .waitForElementVisible('@title')
+      .assert.containsText('@title', 'Каталог')
 
     client.elements('css selector', catalogPage.elements.infoCard.selector, (result) => {
       client.assert.ok(result.value.length > 0, 'Items: ' + result.value.length);
@@ -37,13 +39,12 @@ module.exports = {
             client.verify.ok(result.value.length > 5, `Card #${i + 1} has text len: ${result.value.length}`));
 
         catalogPage
-          .getText(catalogPage.elCardDates(i+1), (result) =>
+          .getText(catalogPage.elCardDates(i + 1), (result) =>
             client.verify.ok(result.value.length > 5, `Card #${i + 1} has dates: ${result.value}`))
-          .getText(catalogPage.elCardPrice(i+1), (result) =>
+          .getText(catalogPage.elCardPrice(i + 1), (result) =>
             client.verify.ok(result.value.length > 5, `Card #${i + 1} has price: ${result.value}`));
 
       });
-
     });
 
 

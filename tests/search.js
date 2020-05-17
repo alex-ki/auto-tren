@@ -1,5 +1,3 @@
-var request = require('request');
-
 module.exports = {
   tags: ['catalog', 'search'],
   before: function (client) {
