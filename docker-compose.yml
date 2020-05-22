@@ -2,7 +2,7 @@ version: "2"
 services:
   qarate-test:
     build: .
-    command: tests
+    command: tests/catalog/search.js
     environment:
       - TEST=test
     volumes:
