@@ -28,6 +28,7 @@ https://bamboo.dev.sozvezdie-tour.ru/cat/
 2. by groups: `nightwatch --group catalog --skipgroup mocha`
 3. by suit: `nightwatch tests/order.js`
 4. by test: `nightwatch tests/order.js --testcase "Add card to cart"`
+5. by env: `nightwatch -e gecko`
 
 
  

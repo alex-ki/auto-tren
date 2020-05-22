@@ -1,4 +1,4 @@
-FROM node:14-buster
+FROM node:8-buster
 
 RUN export DEBIAN_FRONTEND=noninteractive \
   && apt-get update \
