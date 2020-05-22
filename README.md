@@ -46,5 +46,30 @@ https://bamboo.dev.sozvezdie-tour.ru/cat/
 4. by test: `nightwatch tests/order.js --testcase "Add card to cart"`
 5. by env: `nightwatch -e gecko`
 
+## FIX
+... dial unix /var/run/docker.sock: connect: permission denied"
+
+`sudo chmod 777 /var/run/docker.sock`
+
+... stat /root/entrypoint.sh: permission denied
+
+
+chmod ugo+rwx entrypoint.sh
+
+ugo+rwx
+chmod ugo+rwx entrypoint.sh
+git add entrypoint.sh
+git commit -m "Changing file permissions"
+git push origin HEAD:master
+
+git add --chmod=+x entrypoint.sh
+git update-index --chmod=+x entrypoint.sh
+ 
+---------
+USER root
+RUN adduser jenkins users
+USER jenkins 
+RUN chmod 777 /home/jenkins
+
 
  
