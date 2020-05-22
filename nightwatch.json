@@ -62,6 +62,21 @@
           }
         }
       }
+    },
+    "gecko": {
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "alwaysMatch": {
+          "moz:firefoxOptions": {
+            "args": [  "-verbose", "-headless" ]
+          }
+        }
+      },
+      "webdriver": {
+        "start_process": true,
+        "server_path": "node_modules/geckodriver/bin/geckodriver",
+        "port": 4444
+      }
     }
   }
 }
