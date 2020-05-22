@@ -6,3 +6,4 @@ exit_code=$?
 
 echo "exit code: ${exit_code}"
 exit "${exit_code}"
+
