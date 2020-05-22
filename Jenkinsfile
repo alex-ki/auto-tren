@@ -1,11 +1,13 @@
 pipeline {
     agent {
-        docker { image 'node:14-buster' }
+        dockerfile true
     }
     stages {
-        stage('Test') {
+        stage('DockerTest') {
             steps {
-                sh 'node --version'
+                echo 'Hello world'
+                sh 'echo $PATH'
+                sh 'echo myVar1 = $myVar1'
             }
         }
     }
