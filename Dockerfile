@@ -17,6 +17,8 @@ RUN chromium --product-version
 
 RUN chmod +x /root/entrypoint.sh
 
+EXPOSE 9515
+
 ENTRYPOINT ["/root/entrypoint.sh"]
 
 
