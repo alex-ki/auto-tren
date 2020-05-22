@@ -20,7 +20,8 @@ RUN chmod +x /root/node_modules/nightwatch/bin/nightwatch
 
 EXPOSE 9515
 
-ENTRYPOINT ["/root/node_modules/nightwatch/bin/nightwatch"]
-
+#ENTRYPOINT ["/root/node_modules/nightwatch/bin/nightwatch"]
+ENV name AlexK
+ENTRYPOINT ["/bin/bash", "-c", "echo Hello, $name"]
 
 
