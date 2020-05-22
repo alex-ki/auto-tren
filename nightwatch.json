@@ -44,7 +44,7 @@
             }
           },
           "args": [
-            "--no-sandbox",
+            "--no-sandbox", "--headless",
             "--user-agent=Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
           ]
         }
@@ -68,7 +68,12 @@
         "browserName": "firefox",
         "alwaysMatch": {
           "moz:firefoxOptions": {
-            "args": [  "-verbose", "-headless" ]
+            "prefs": {
+              "general.useragent.override": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+            },
+            "args": [
+              "-verbose"
+            ]
           }
         }
       },
