@@ -13,8 +13,6 @@ WORKDIR /root
 ADD . ./
 RUN npm install
 
-EXPOSE 9515
-
 RUN chromium --product-version
 
 ENTRYPOINT ["/root/entrypoint.sh"]

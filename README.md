@@ -24,6 +24,18 @@ Run 'nigtwatch'
 ## Docker 
 run `docker-compose up --build`
 
+## Jenkins 
+
+terminal: 
+
+`docker pull jenkins/jenkins:lts`
+
+`docker run -p 8080:8080 -p 50000:50000 -v /home/alex/jenkins_home:/var/jenkins_home jenkins/jenkins:lts`
+
+`sudo chown 1000 /home/alex/jenkins_home`
+
+http://0.0.0.0:8080 - jenkins
+
 ## Web site for testing
 https://bamboo.dev.sozvezdie-tour.ru/cat/
 
