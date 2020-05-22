@@ -17,4 +17,17 @@ Run 'nigtwatch'
 3. using
 `junit-viewer --results=reports --save=jeport.html`
 
+## Docker 
+run `docker-compose up --build`
+
+## Web site for testing
+https://bamboo.dev.sozvezdie-tour.ru/cat/
+
+## Test runner
+1. by tags: `nightwatch --tag catalog --skiptags consistency`
+2. by groups: `nightwatch --group catalog --skipgroup mocha`
+3. by suit: `nightwatch tests/order.js`
+4. by test: `nightwatch tests/order.js --testcase "Add card to cart"`
+
+
  

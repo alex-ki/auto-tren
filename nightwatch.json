@@ -49,7 +49,19 @@
           ]
         }
       },
-      "globals": {}
+      "globals": {
+        "credentials": {
+          "name": "Aaa",
+          "email": "a@a.aa",
+          "pass": "aaa",
+          "card": {
+            "number": "1111 1111 1111 1111",
+            "name": "Aaa",
+            "expiration": "11/11",
+            "ccv": "111"
+          }
+        }
+      }
     }
   }
 }

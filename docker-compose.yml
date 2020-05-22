@@ -7,3 +7,4 @@ services:
       - TEST=test
     volumes:
       -  ./reports:/root/reports
+      -  ./screenshots:/root/screenshots

@@ -1,5 +1,3 @@
-var request = require('request');
-
 module.exports = {
   tags: ['card', 'business'],
   before: function (client) {
@@ -36,16 +34,19 @@ module.exports = {
       .waitForElementVisible('@title')
       .assert.containsText('@title', 'Корзина')
 
-    cartPage
-      .setValue('@orderName', 'Alex')
-      .setValue('@orderEmail', 'a@a.aa')
-      .setValue('@orderPass', '111');
+    let cr = client.globals.credentials;
+    let card = cr.card;
 
     cartPage
-      .setValue('@orderCardNum', '1234 1234 1234 1234')
-      .setValue('@orderCardName', 'Alex')
-      .setValue('@orderCardExp', '12/21')
-      .setValue('@orderCardCVC', '111');
+      .setValue('@orderName', cr.name)
+      .setValue('@orderEmail', cr.email)
+      .setValue('@orderPass', cr.pass);
+
+    cartPage
+      .setValue('@orderCardNum', card.number)
+      .setValue('@orderCardName', card.name)
+      .setValue('@orderCardExp', card.expiration)
+      .setValue('@orderCardCVC', card.ccv);
 
     cartPage
       .assert.not.elementPresent('@orderLine1')

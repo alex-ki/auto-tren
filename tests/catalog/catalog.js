@@ -1,7 +1,7 @@
 var request = require('request');
 
 module.exports = {
-  tags: ['catalog', 'integratioin'],
+  tags: ['catalog', 'consistency'],
   before: function (client) {
     client
       .resizeWindow(1280, 768)
