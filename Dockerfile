@@ -15,6 +15,8 @@ RUN npm install
 
 RUN chromium --product-version
 
+RUN chmod +x /root/entrypoint.sh
+
 ENTRYPOINT ["/root/entrypoint.sh"]
 
 
