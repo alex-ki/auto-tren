@@ -13,17 +13,19 @@ module.exports = {
   retryAssertionTimeout: 1000,
 
   after: function (cb) {
-//    chromedriver.stop();
+    chromedriver.stop();
     cb();
   },
 
   before(cb) {
-//    chromedriver.start();
+    chromedriver.start();
 
     // fix error: (node:15138) MaxListenersExceededWarning:
     // Possible EventEmitter memory leak detected. 11 error listeners added.
     // Use emitter.setMaxListeners() to increase limit
     require("events").EventEmitter.defaultMaxListeners = 0;
+
+    console.log('process.env.TEST_VAR: ', process.env.TEST_VAR); // export TEST_VAR=some-val
 
     cb();
   },
