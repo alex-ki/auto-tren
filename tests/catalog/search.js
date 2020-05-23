@@ -15,7 +15,7 @@ module.exports = {
     const catalogPage = client.page.catalog();
     catalogPage.navigate();
     catalogPage.waitForElementVisible('@title')
-broken test
+
     catalogPage.setValue('@search', searchWord);
     client.elements('css selector', catalogPage.elements.infoCard.selector, (result) => {
       client.assert.equal(result.value.length, searchCount, 'Items: ' + result.value.length);
