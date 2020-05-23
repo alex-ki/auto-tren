@@ -1,13 +1,17 @@
 #!/bin/bash
 
+echo "---------------------------------------"
 ls
+echo "---------------------------------------"
 ls .
+echo "---------------------------------------"
 ls /root
+echo "---------------------------------------"
 
-chmod +x /root/entrypoint.sh
-chmod +x /root/node_modules/nightwatch/bin/nightwatch
+chmod +x ./entrypoint.sh
+chmod +x ./node_modules/nightwatch/bin/nightwatch
 
-/root/node_modules/nightwatch/bin/nightwatch $@
+./node_modules/nightwatch/bin/nightwatch $@
 
 exit_code=$?
 

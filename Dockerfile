@@ -13,14 +13,8 @@ WORKDIR /root
 ADD . ./
 RUN npm install
 
-RUN chromium --product-version
-
-RUN chmod +x /root/entrypoint.sh
-RUN chmod +x /root/node_modules/nightwatch/bin/nightwatch
-
 EXPOSE 9515
 
-#ENTRYPOINT ["/bin/bash", "-c", "echo Hello All!"]
 ENTRYPOINT ["/root/entrypoint.sh"]
 
 
