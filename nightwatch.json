@@ -10,7 +10,7 @@
   "disable_colors": false,
   "test_workers": false,
   "webdriver": {
-    "start_process": false,
+    "start_process": true,
     "server_path": "node_modules/chromedriver/bin/chromedriver/lib/chromedriver/chromedriver",
     "port": 9515
   },
