@@ -8,9 +8,9 @@ RUN export DEBIAN_FRONTEND=noninteractive \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /root
+#WORKDIR /root
 
-ADD . ./
+#ADD . ./
 
 RUN npm install
 
