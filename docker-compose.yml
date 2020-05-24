@@ -1,0 +1,10 @@
+version: "2"
+services:
+  qarate-test:
+    build: .
+    command: tests/catalog/search.js
+    environment:
+      - TEST_VAR=QARATE 6
+    volumes:
+      -  ./reports:/root/reports
+      -  ./screenshots:/root/screenshots

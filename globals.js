@@ -25,6 +25,8 @@ module.exports = {
     // Use emitter.setMaxListeners() to increase limit
     require("events").EventEmitter.defaultMaxListeners = 0;
 
+    console.log('process.env.TEST_VAR: ', process.env.TEST_VAR); // export TEST_VAR=some-val
+
     cb();
   },
 

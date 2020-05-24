@@ -4,12 +4,14 @@
   ],
   "output_folder": "reports",
   "page_objects_path": "pages",
+  "custom_commands_path": "commands",
+  "custom_assertions_path": "assertions",
   "globals_path": "globals.js",
   "disable_colors": false,
   "test_workers": false,
   "webdriver": {
     "start_process": false,
-    "server_path": "node_modules/chromedriver/bin/chromedriver",
+    "server_path": "./node_modules/chromedriver/lib/chromedriver/chromedriver",
     "port": 9515
   },
   "test_settings": {
@@ -42,12 +44,44 @@
             }
           },
           "args": [
-
+            "--no-sandbox", "--headless",
+            "--user-agent=Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
           ]
         }
       },
-      "launch_url": "https://www.mql5.com/en/economic-calendar",
-      "globals": {}
+      "globals": {
+        "credentials": {
+          "name": "Aaa",
+          "email": "a@a.aa",
+          "pass": "aaa",
+          "card": {
+            "number": "1111 1111 1111 1111",
+            "name": "Aaa",
+            "expiration": "11/11",
+            "ccv": "111"
+          }
+        }
+      }
+    },
+    "gecko": {
+      "desiredCapabilities": {
+        "browserName": "firefox",
+        "alwaysMatch": {
+          "moz:firefoxOptions": {
+            "prefs": {
+              "general.useragent.override": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+            },
+            "args": [
+              "-verbose"
+            ]
+          }
+        }
+      },
+      "webdriver": {
+        "start_process": true,
+        "server_path": "node_modules/geckodriver/bin/geckodriver",
+        "port": 4444
+      }
     }
   }
 }
