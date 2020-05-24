@@ -1,6 +1,11 @@
 #!/bin/bash
 echo "--------- start entry point--------------"
 ls -d $PWD/*
+
+echo "--------- npm install--------------"
+npm install
+echo "-- ls -d PWD -------------------------------------"
+ls -d $PWD/*
 echo "-- node_modules -------------------------------------"
 ls node_modules
 echo "-- node_modules/chromedriver -------------------------------------"
