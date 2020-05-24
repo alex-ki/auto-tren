@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "--------- start entry point--------------"
+npm install
 
 echo "---------------------------------------"
 ls
