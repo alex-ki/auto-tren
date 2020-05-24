@@ -10,7 +10,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 
 WORKDIR /root
 
-#ADD . ./
+ADD . ./
 
 RUN npm install
 
