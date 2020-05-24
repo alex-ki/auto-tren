@@ -12,7 +12,7 @@ WORKDIR /root
 
 ADD . ./
 
-#RUN npm install
+RUN sudo npm install --unsafe-perm=true --allow-root
 
 EXPOSE 9515
 
