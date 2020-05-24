@@ -4,6 +4,8 @@ ls -d $PWD/*
 
 echo "--------- npm install--------------"
 npm install
+echo "-- sudo npm install electron --unsafe-perm=true --allow-root  -------------------------------------"
+sudo npm install chromedriver --unsafe-perm=true --allow-root
 echo "-- ls -d PWD -------------------------------------"
 ls -d $PWD/*
 echo "-- node_modules -------------------------------------"
