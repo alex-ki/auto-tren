@@ -11,6 +11,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 WORKDIR /root
 
 ADD . ./
+
 RUN npm install
 
 EXPOSE 9515

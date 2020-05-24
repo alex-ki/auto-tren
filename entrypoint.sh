@@ -12,7 +12,7 @@ echo "---------------------------------------"
 #chmod +x ./entrypoint.sh
 #chmod +x ./node_modules/nightwatch/bin/nightwatch
 
-/root/node_modules/nightwatch/bin/nightwatch $@
+./node_modules/nightwatch/bin/nightwatch $@
 
 exit_code=$?
 
