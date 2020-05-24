@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "----> param: "
-echo $@
-echo "----------"
-
 ./node_modules/nightwatch/bin/nightwatch $@
 
 exit_code=$?
